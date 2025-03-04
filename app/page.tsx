@@ -14,35 +14,34 @@ import Image from "next/image";
 import Link from "next/link";
 import { barlow } from "./font";
 
-// const stacks = ["react", "tailwind", "nextjs", "threejs", "webgl", "git"];
 const stacks = [
   {
-    color: "#00BE43",
+    color: "#FFB200",
     name: "react",
     logo: ReactLogo,
   },
   {
-    color: "#FA50B5",
+    color: "#FF6100",
     name: "tailwind",
     logo: TailwindLogo,
   },
   {
-    color: "#AC39F2",
+    color: "#EA3737",
     name: "nextjs",
     logo: NextjsLogo,
   },
   {
-    color: "#0482FF",
+    color: "#FA50B5",
     name: "threejs",
     logo: ThreejsLogo,
   },
   {
-    color: "#FFB200",
+    color: "#AC39F2",
     name: "postgresSql",
     logo: PostgreSqlLogo,
   },
   {
-    color: "#FF6100",
+    color: "#0482FF",
     name: "git",
     logo: GitLogo,
   },

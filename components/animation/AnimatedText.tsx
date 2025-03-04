@@ -16,12 +16,16 @@ const defaultAnimation = {
   hidden: {
     opacity: 0,
     y: 20,
+    transition: {
+      type: "spring",
+    },
   },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
       duration: 0.1,
+      type: "srping",
     },
   },
 };
