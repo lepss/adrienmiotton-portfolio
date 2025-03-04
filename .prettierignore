@@ -1,0 +1,10 @@
+# Ignore artifacts:
+build
+coverage
+# Ignorer le dossier Next.js build
+.next/
+# Ignorer les fichiers de dépendances
+node_modules/
+# Ignorer les fichiers de cache
+package-lock.json
+yarn.lock
