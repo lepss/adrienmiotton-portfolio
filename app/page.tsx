@@ -1,7 +1,7 @@
 // import Link from "next/link";
 
-import { AnimatedText } from "@/components/animation/AnimatedText";
 import { ColorSwapDiv } from "@/components/animation/ColorSwapDiv";
+import { SwapText } from "@/components/animation/SwapText";
 import { SectionLayout } from "@/components/layout/SectionLayout";
 import { SectionLayoutContent } from "@/components/layout/SectionLayoutContent";
 import GitLogo from "@/public/git.svg";
@@ -37,7 +37,7 @@ const stacks = [
   },
   {
     color: "#AC39F2",
-    name: "postgresSql",
+    name: "postgreSql",
     logo: PostgreSqlLogo,
   },
   {
@@ -74,11 +74,15 @@ export default function Home() {
           <div className="-m-[0.5px] grid grid-cols-1 md:grid-cols-(--md-cols) md:grid-rows-(--md-rows) lg:grid-cols-(--lg-cols) lg:grid-rows-(--lg-rows) xl:grid-cols-(--xl-cols) xl:grid-rows-(--xl-rows)">
             <div className="col-span-full -m-[0.5px] block border border-black p-7 lg:hidden">
               <div className="relative">
-                <AnimatedText
+                {/* <AnimatedText
                   text="Creative Web Developer"
                   el="h1"
                   className="sm:tex-3xl mx-auto -mb-[0.25px] text-center text-2xl leading-relaxed tracking-wide uppercase md:text-4xl lg:mx-0 lg:text-left lg:text-4xl xl:text-[3.5rem]"
                   once
+                /> */}
+                <SwapText
+                  text="Creative Web Developer"
+                  className="sm:tex-3xl mx-auto text-center text-2xl uppercase md:text-4xl lg:text-left lg:text-4xl xl:text-[3.5rem]"
                 />
               </div>
             </div>
@@ -87,12 +91,16 @@ export default function Home() {
                 className={`${barlow.className} -m-[0.5px] hidden border border-black p-7 lg:block lg:min-h-5 xl:pb-9`}
               >
                 <div className="relative">
-                  <AnimatedText
+                  {/* <AnimatedText
                     text="Creative Web Developer"
                     el="h1"
                     className="sm:tex-3xl mx-auto -mb-1.5 text-center text-2xl leading-none tracking-wide uppercase md:text-4xl lg:mx-0 lg:text-left lg:text-4xl xl:text-[3.5rem]"
                     once
                     // repeatDelay={1000}
+                  /> */}
+                  <SwapText
+                    text="Creative Web Developer"
+                    className="sm:tex-3xl text-center text-2xl uppercase md:text-4xl lg:mx-0 lg:text-left lg:text-4xl xl:text-[3.5rem]"
                   />
                 </div>
               </div>
@@ -174,7 +182,7 @@ export default function Home() {
       <SectionLayout className="bg-canyon border-gray-400">
         <SectionLayoutContent className="border-gray-400">
           <div className="-m-[0.5px] flex min-h-20 grid-cols-1 items-center justify-center p-7 text-center text-lg leading-4 uppercase">
-            <h2>Technical stack</h2>
+            <h2 className="text-lg text-black">Technical stack</h2>
           </div>
         </SectionLayoutContent>
       </SectionLayout>
@@ -186,7 +194,7 @@ export default function Home() {
               <ColorSwapDiv
                 key={_index}
                 backgroundColor={stack.color}
-                className="-m-[0.5px] flex flex-col items-center justify-center gap-2 border border-gray-400 p-7 md:py-14 lg:aspect-square"
+                className="-m-[0.5px] flex flex-col items-center justify-center gap-2 border border-gray-400 p-7 text-black md:py-14 lg:aspect-square"
               >
                 <Image
                   src={stack.logo}
