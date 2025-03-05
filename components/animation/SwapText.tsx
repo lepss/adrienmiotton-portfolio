@@ -20,14 +20,13 @@ export const SwapText = ({ text, className, once }: SwapTextProps) => {
   return (
     <div className={clsx("", className)}>
       <span className="sr-only">{text}</span>
-      <motion.span aria-hidden>
+      <span aria-hidden>
         {textArray.map((line, _i) => (
           <span key={_i} className="block">
             {line.split(" ").map((word, _j) => (
               <motion.div
                 initial="hidden"
                 animate="visible"
-                // transition={{ staggerChildren: 0.02 }}
                 key={_j}
                 className="relative inline-block overflow-hidden whitespace-nowrap"
                 style={{ lineHeight: 0.8 }}
@@ -70,7 +69,7 @@ export const SwapText = ({ text, className, once }: SwapTextProps) => {
             ))}
           </span>
         ))}
-      </motion.span>
+      </span>
     </div>
   );
 };

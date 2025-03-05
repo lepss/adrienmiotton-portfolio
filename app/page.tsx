@@ -1,7 +1,7 @@
 // import Link from "next/link";
-
 import { ColorSwapDiv } from "@/components/animation/ColorSwapDiv";
 import { SwapText } from "@/components/animation/SwapText";
+import { PointCloud } from "@/components/experience/FacePointCloud";
 import { SectionLayout } from "@/components/layout/SectionLayout";
 import { SectionLayoutContent } from "@/components/layout/SectionLayoutContent";
 import GitLogo from "@/public/git.svg";
@@ -74,12 +74,6 @@ export default function Home() {
           <div className="-m-[0.5px] grid grid-cols-1 md:grid-cols-(--md-cols) md:grid-rows-(--md-rows) lg:grid-cols-(--lg-cols) lg:grid-rows-(--lg-rows) xl:grid-cols-(--xl-cols) xl:grid-rows-(--xl-rows)">
             <div className="col-span-full -m-[0.5px] block border border-black p-7 lg:hidden">
               <div className="relative">
-                {/* <AnimatedText
-                  text="Creative Web Developer"
-                  el="h1"
-                  className="sm:tex-3xl mx-auto -mb-[0.25px] text-center text-2xl leading-relaxed tracking-wide uppercase md:text-4xl lg:mx-0 lg:text-left lg:text-4xl xl:text-[3.5rem]"
-                  once
-                /> */}
                 <SwapText
                   text="Creative Web Developer"
                   className="sm:tex-3xl mx-auto text-center text-2xl uppercase md:text-4xl lg:text-left lg:text-4xl xl:text-[3.5rem]"
@@ -91,13 +85,6 @@ export default function Home() {
                 className={`${barlow.className} -m-[0.5px] hidden border border-black p-7 lg:block lg:min-h-5 xl:pb-9`}
               >
                 <div className="relative">
-                  {/* <AnimatedText
-                    text="Creative Web Developer"
-                    el="h1"
-                    className="sm:tex-3xl mx-auto -mb-1.5 text-center text-2xl leading-none tracking-wide uppercase md:text-4xl lg:mx-0 lg:text-left lg:text-4xl xl:text-[3.5rem]"
-                    once
-                    // repeatDelay={1000}
-                  /> */}
                   <SwapText
                     text="Creative Web Developer"
                     className="sm:tex-3xl text-center text-2xl uppercase md:text-4xl lg:mx-0 lg:text-left lg:text-4xl xl:text-[3.5rem]"
@@ -144,16 +131,9 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="bg-canyon relative -m-[0.5px] block aspect-square overflow-hidden border border-black">
-              <Image
-                src={"/profile-square.jpg"}
-                alt="profile image"
-                // width={768}
-                // height={768}
-                fill={true}
-                // sizes="(max-width: 768px) 100vw, 33vw"
-                priority={true}
-              />
+
+            <div className="relative -m-[0.5px] block aspect-square overflow-hidden border border-black">
+              <PointCloud />
             </div>
             <div className="grid md:hidden">
               <div className="relative -m-[0.5px] block items-center border border-black">
