@@ -4,7 +4,7 @@ import clsx from "clsx";
 import { motion } from "motion/react";
 import React from "react";
 
-interface ColorSwapDivProps {
+interface HoverColorSwapDivProps {
   className?: string;
   backgroundColor: string;
   once?: boolean;
@@ -12,18 +12,11 @@ interface ColorSwapDivProps {
   children: React.ReactNode;
 }
 
-const defaultAnimation = {
-  hidden: {},
-  visible: {},
-};
-
-export const ColorSwapDiv = ({
+export const HoverColorSwapDiv = ({
   className,
   backgroundColor,
-  once,
-  repeatDelay,
   children,
-}: ColorSwapDivProps) => {
+}: HoverColorSwapDivProps) => {
   return (
     <motion.div
       whileHover={{ backgroundColor: backgroundColor }}
