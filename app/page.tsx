@@ -1,4 +1,5 @@
 import { SwapText } from "@/components/animation/SwapText";
+import { PointCloud } from "@/components/experience/FacePointCloud";
 import { Header } from "@/components/layout/Header";
 import { SectionLayout } from "@/components/layout/SectionLayout";
 import { SectionLayoutContent } from "@/components/layout/SectionLayoutContent";
@@ -76,7 +77,7 @@ export default function Home() {
               </div>
             </div>
             <div className="relative -m-[0.5px] block aspect-square overflow-hidden border border-black">
-              {/* <PointCloud /> */}
+              <PointCloud />
             </div>
             <div className="grid md:hidden">
               <div className="relative -m-[0.5px] block items-center border border-black">

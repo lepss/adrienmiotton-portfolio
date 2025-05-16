@@ -275,9 +275,9 @@ export const PointCloud = () => {
         />
         <ambientLight intensity={0.5} />
         <pointLight position={[10, 10, 10]} />
-        <FaceFBO />
+        {/* <FaceFBO /> */}
         {/* <FaceCloudShader url="./models/face_point_cloud_02.ply" /> */}
-        {/* <FaceMesh url="./models/face_point_cloud_02.ply" /> */}
+        <FaceMesh url="./models/face_point_cloud_02.ply" />
       </Canvas>
     </div>
   );

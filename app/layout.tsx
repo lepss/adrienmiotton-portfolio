@@ -14,6 +14,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta name="apple-mobile-web-app-title" content="Adrien Miotton" />
+      </head>
       <body className={`${baiJamjuree.className} min-w-2xs antialiased`}>
         {children}
       </body>
