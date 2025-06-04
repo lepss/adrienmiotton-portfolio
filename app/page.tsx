@@ -3,11 +3,13 @@ import { PointCloud } from "@/components/experience/FacePointCloud";
 import { Header } from "@/components/layout/Header";
 import { SectionLayout } from "@/components/layout/SectionLayout";
 import { SectionLayoutContent } from "@/components/layout/SectionLayoutContent";
+import { ProjectSection } from "@/components/section/ProjectSection";
+import { ProjectSectionContainer } from "@/components/section/ProjectSectionContainer";
 import { StackSection } from "@/components/section/StackSection";
 import Link from "next/link";
 import { barlow } from "./font";
 
-const socials = ["twitter", "github", "linkedin"];
+const socials = ["malt", "github", "linkedin"];
 
 export default function Home() {
   return (
@@ -104,51 +106,57 @@ export default function Home() {
       </SectionLayout>
       {/* TECHNICAL STACK */}
       <StackSection />
+      {/* PROJECTS */}
+      <ProjectSectionContainer>
+        <ProjectSection
+          title="Agence Pascaud-Devolf"
+          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quos voluptates quas voluptatibus! Dolor laudantium dolorem laborum adipisci obcaecati nam minus possimus, vero minima vitae corporis, nostrum alias facere atque!"
+          imagePath="/images/agence-pascaud-devolf-artists-page.png"
+          imageAlt="agence pasvaud-devolf artist page"
+          url="https://www.pascaud-devolf.fr/"
+          // githubUrl="https://github.com"
+          stacks={["React", "Nextjs", "Tailwind"]}
+        />
+        <ProjectSection
+          title="EAE Landing page"
+          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quos voluptates quas voluptatibus! Dolor laudantium dolorem laborum adipisci obcaecati nam minus possimus, vero minima vitae corporis, nostrum alias facere atque!"
+          imagePath="/images/eae-home-page.png"
+          imageAlt="EAE landing page"
+          url="https://ecoauditenergetique.fr/"
+          // githubUrl="https://github.com"
+          stacks={["HTML", "CSS", "Javascript"]}
+        />
+        <ProjectSection
+          title="Agence mère"
+          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quos voluptates quas voluptatibus! Dolor laudantium dolorem laborum adipisci obcaecati nam minus possimus, vero minima vitae corporis, nostrum alias facere atque!"
+          imagePath="/images/agence-mere-talent-page.png"
+          imageAlt="agence mère talent page"
+          url="https://www.agencemere.com/"
+          // githubUrl="https://github.com"
+          stacks={["React", "Nextjs", "Tailwind"]}
+        />
+        <ProjectSection
+          title="Seri Forge"
+          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quos voluptates quas voluptatibus! Dolor laudantium dolorem laborum adipisci obcaecati nam minus possimus, vero minima vitae corporis, nostrum alias facere atque!"
+          imagePath="/images/seri-forge-home-page.png"
+          imageAlt="Seri forge landing page"
+          url="https://www.seri-forge.fr/"
+          // githubUrl="https://github.com"
+          stacks={["React", "Tailwind"]}
+        />
+        <ProjectSection
+          title="SLRA Landing page"
+          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quos voluptates quas voluptatibus! Dolor laudantium dolorem laborum adipisci obcaecati nam minus possimus, vero minima vitae corporis, nostrum alias facere atque!"
+          imagePath="/images/slra-home-page.png"
+          imageAlt="Sur les routes d'arabie home page"
+          url="https://www.surlesroutesdarabie.com/"
+          // githubUrl="https://github.com"
+          stacks={["React", "Nextjs", "Tailwind"]}
+        />
+      </ProjectSectionContainer>
       <SectionLayout className="bg-charcoal border-black text-white">
         <SectionLayoutContent className="border-black">
           <div className="p-4 text-2xl">
-            <h1>Test</h1>
-          </div>
-        </SectionLayoutContent>
-      </SectionLayout>
-      <SectionLayout className="bg-charcoal border-black text-white">
-        <SectionLayoutContent className="border-black">
-          <div className="p-4 text-2xl">
-            <h1>Test</h1>
-          </div>
-        </SectionLayoutContent>
-      </SectionLayout>
-      <SectionLayout className="bg-charcoal border-black text-white">
-        <SectionLayoutContent className="border-black">
-          <div className="p-4 text-2xl">
-            <h1>Test</h1>
-          </div>
-        </SectionLayoutContent>
-      </SectionLayout>
-      <SectionLayout className="bg-charcoal border-black text-white">
-        <SectionLayoutContent className="border-black">
-          <div className="p-4 text-2xl">
-            <h1>Test</h1>
-          </div>
-        </SectionLayoutContent>
-      </SectionLayout>
-      <SectionLayout className="bg-charcoal border-black text-white">
-        <SectionLayoutContent className="border-black">
-          <div className="p-4 text-2xl">
-            <h1>Test</h1>
-          </div>
-        </SectionLayoutContent>
-      </SectionLayout>
-      <SectionLayout className="bg-charcoal border-black text-white">
-        <SectionLayoutContent className="border-black">
-          <div className="p-4 text-2xl">
-            <h1>Test</h1>
-          </div>
-        </SectionLayoutContent>
-      </SectionLayout>
-      <SectionLayout className="bg-charcoal border-black text-white">
-        <SectionLayoutContent className="border-black">
-          <div className="text-2x p-4">
             <h1>Test</h1>
           </div>
         </SectionLayoutContent>
