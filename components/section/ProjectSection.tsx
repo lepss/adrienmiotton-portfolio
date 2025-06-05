@@ -38,7 +38,7 @@ export const ProjectSection = () => {
             <div className="flex justify-center">
               <button
                 onClick={() => setShowAll(!showAll)}
-                className="bg-blue-custom hover:bg-red-custom h-15 w-full rounded-full border border-black text-xl text-white uppercase transition-all duration-300 ease-out hover:rounded-none"
+                className="bg-blue-custom h-15 w-full cursor-pointer rounded-4xl text-xl text-white uppercase transition-[all] duration-200 ease-out hover:rounded-none"
               >
                 {showAll ? "Show less" : "Show more"}
               </button>

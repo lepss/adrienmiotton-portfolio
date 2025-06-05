@@ -1,6 +1,7 @@
 import { SectionLayoutContent } from "@/components/layout/SectionLayoutContent";
 import { STACKS_DATA } from "@/constants/stacks";
 import { ExternalLinkIcon, GithubIcon } from "lucide-react";
+import { motion } from "motion/react";
 import Image from "next/image";
 import { SectionLayout } from "../layout/SectionLayout";
 import { Badge } from "../ui/badge";
@@ -64,7 +65,7 @@ export const Project = ({
                 <p>{description}</p>
               </div>
               <div className="mt-7 grid gap-y-3.5 text-sm leading-normal uppercase md:-mx-3.5 md:mt-auto lg:-mx-0 lg:inline-grid">
-                <div className="flex flex-row justify-end gap-2 overflow-hidden pt-5">
+                <div className="flex flex-row justify-end gap-2 pt-5">
                   {stacks.map((stackName, index) => {
                     const stackData = STACKS_DATA.find(
                       (s) => s.name.toLowerCase() === stackName.toLowerCase(),
@@ -84,15 +85,57 @@ export const Project = ({
           </div>
 
           {/* 👉 Image desktop uniquement */}
-          <div className="relative -m-[0.5px] hidden aspect-video overflow-hidden border border-black lg:block lg:aspect-auto">
-            <Image
-              src={imagePath}
-              layout="fill"
-              objectFit="cover"
-              alt={imageAlt}
-              className="h-full"
-            />
-          </div>
+          {url ? (
+            <motion.a
+              href={url}
+              target="_blank"
+              whileHover="hover"
+              initial="rest"
+              animate="rest"
+              className="group relative -m-[0.5px] hidden aspect-video overflow-hidden border border-black lg:block lg:aspect-auto"
+            >
+              {/* Image avec zoom et assombrissement */}
+              <motion.div
+                variants={{
+                  rest: { scale: 1, filter: "brightness(1)" },
+                  hover: { scale: 1.08, filter: "brightness(0.7)" },
+                }}
+                transition={{ duration: 0.4 }}
+                className="h-full w-full"
+              >
+                <Image
+                  src={imagePath}
+                  layout="fill"
+                  objectFit="cover"
+                  alt={imageAlt}
+                  className="h-full w-full"
+                />
+              </motion.div>
+
+              {/* Icone animée */}
+              <motion.span
+                variants={{
+                  rest: { x: "100%", opacity: 0 },
+                  hover: { x: "0%", opacity: 1 },
+                }}
+                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white"
+              >
+                <ExternalLinkIcon className="h-15 w-15" />
+              </motion.span>
+            </motion.a>
+          ) : (
+            // fallback si pas de URL
+            <div className="relative -m-[0.5px] hidden aspect-video overflow-hidden border border-black lg:block lg:aspect-auto">
+              <Image
+                src={imagePath}
+                layout="fill"
+                objectFit="cover"
+                alt={imageAlt}
+                className="h-full"
+              />
+            </div>
+          )}
         </div>
       </SectionLayoutContent>
     </SectionLayout>
