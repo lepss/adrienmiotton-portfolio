@@ -1,0 +1,42 @@
+export const PROJECT_DATA = [
+  {
+    title: "Agence Pascaud-Devolf",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+    imagePath: "/images/agence-pascaud-devolf-artists-page.png",
+    imageAlt: "agence pasvaud-devolf artist page",
+    url: "https://www.pascaud-devolf.fr/",
+    stacks: ["React", "Nextjs", "Tailwind"],
+  },
+  {
+    title: "EAE Landing page",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+    imagePath: "/images/eae-home-page.png",
+    imageAlt: "EAE landing page",
+    url: "https://ecoauditenergetique.fr/",
+    stacks: ["HTML", "CSS", "Javascript"],
+  },
+  {
+    title: "Agence mère",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+    imagePath: "/images/agence-mere-talent-page.png",
+    imageAlt: "agence mère talent page",
+    url: "https://www.agencemere.com/",
+    stacks: ["React", "Nextjs", "Tailwind"],
+  },
+  {
+    title: "Seri Forge",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+    imagePath: "/images/seri-forge-home-page.png",
+    imageAlt: "Seri forge landing page",
+    url: "https://www.seri-forge.fr/",
+    stacks: ["React", "Tailwind"],
+  },
+  {
+    title: "SLRA Landing page",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+    imagePath: "/images/slra-home-page.png",
+    imageAlt: "Sur les routes d'arabie home page",
+    url: "https://www.surlesroutesdarabie.com/",
+    stacks: ["React", "Nextjs", "Tailwind"],
+  },
+];

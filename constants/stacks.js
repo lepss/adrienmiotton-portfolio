@@ -12,14 +12,26 @@ export const STACKS_DATA = [
     logo: ReactLogo,
   },
   {
+    color: "#FFB200",
+    name: "html",
+  },
+  {
     color: "#FF6100",
     name: "tailwind",
     logo: TailwindLogo,
   },
   {
+    color: "#FF6100",
+    name: "css",
+  },
+  {
     color: "#EA3737",
     name: "nextjs",
     logo: NextjsLogo,
+  },
+  {
+    color: "#EA3737",
+    name: "javascript",
   },
   {
     color: "#FA50B5",
