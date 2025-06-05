@@ -17,7 +17,9 @@ export default function RootLayout({
       <head>
         <meta name="apple-mobile-web-app-title" content="Adrien Miotton" />
       </head>
-      <body className={`${baiJamjuree.className} min-w-2xs antialiased`}>
+      <body
+        className={`${baiJamjuree.className} min-w-2xs scroll-smooth antialiased`}
+      >
         {children}
       </body>
     </html>
