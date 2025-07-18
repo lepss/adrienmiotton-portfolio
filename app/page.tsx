@@ -1,3 +1,4 @@
+import { FetchTestSection } from "@/components/fetchTestSection";
 import { Header } from "@/components/layout/Header";
 import { SectionLayout } from "@/components/layout/SectionLayout";
 import { SectionLayoutContent } from "@/components/layout/SectionLayoutContent";
@@ -33,6 +34,7 @@ export default function Home() {
           </div>
         </SectionLayoutContent>
       </SectionLayout>
+      <FetchTestSection />
     </div>
   );
 }
