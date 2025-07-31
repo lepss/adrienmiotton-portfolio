@@ -3,11 +3,13 @@ import { SwapText } from "@/components/animation/SwapText";
 import { PointCloud } from "@/components/experience/FacePointCloud";
 import { SectionLayout } from "@/components/layout/SectionLayout";
 import { SectionLayoutContent } from "@/components/layout/SectionLayoutContent";
+import { fetchGlobal } from "@/lib/api/global";
 import Link from "next/link";
 
 const socials = ["malt", "github", "linkedin"];
 
-export const PresentationSection = () => {
+export const PresentationSection = async () => {
+  const global = await fetchGlobal();
   return (
     <SectionLayout className="bg-charcoal border-black text-white">
       <SectionLayoutContent className="border-black">
@@ -34,10 +36,7 @@ export const PresentationSection = () => {
             <div className="-m-[0.5px] flex flex-1 flex-col overflow-hidden border border-black p-7 text-center md:text-left lg:items-start xl:pr-14">
               <div className="block">
                 <p className="lg:text-md mb-7 last:mb-0 xl:text-lg">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Repellendus blanditiis temporibus quibusdam nobis! Facere illo
-                  fuga inventore maiores sit perspiciatis! Perferendis aliquid
-                  maiores ad rerum dolorem. Temporibus modi dolor aspernatur?
+                  {global.description}
                 </p>
               </div>
               <div className="mt-7 grid gap-y-3.5 text-sm leading-normal uppercase sm:grid-cols-2 md:-mx-3.5 md:mt-auto lg:-mx-0 lg:inline-grid">

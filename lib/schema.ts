@@ -11,6 +11,9 @@ export interface Project {
 	/** @required */
 	title: string;
 	content?: string | null;
+	url?: string | null;
+	/** @required */
+	image: DirectusFile | string;
 	technos?: ProjectsTechno[] | string[];
 }
 

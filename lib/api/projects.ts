@@ -6,7 +6,7 @@ import { readItems } from "@directus/sdk";
 export async function fetchProjects(): Promise<Project[]> {
   const projects = await directus.request(
     readItems("Projects", {
-      fields: ["id", "title", "content", "technos"],
+      fields: ["id", "title", "image", "content", "url", "technos"],
       sort: ["id"],
     }),
   );

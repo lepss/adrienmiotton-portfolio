@@ -1,8 +1,10 @@
 import { SectionLayout } from "@/components/layout/SectionLayout";
 import { SectionLayoutContent } from "@/components/layout/SectionLayoutContent";
+import { fetchGlobal } from "@/lib/api/global";
 import Link from "next/link";
 
-export const Header = () => {
+export const Header = async () => {
+  const global = await fetchGlobal();
   return (
     <SectionLayout className="bg-charcoal sticky -top-[1px] z-50 border-black text-white">
       <SectionLayoutContent className="border-black">
@@ -13,7 +15,7 @@ export const Header = () => {
               className="group relative flex h-full items-center px-7"
             >
               <div className="relative block text-lg leading-5 uppercase md:text-2xl">
-                Adrien Miotton
+                {global.title}
               </div>
             </Link>
           </div>
